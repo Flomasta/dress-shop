@@ -2,22 +2,25 @@
 //COLORS
 $white: #ffffff;
 $black: #000000;
-$bright: #E3E6F3;
 $dark: #1a1a1a;
-$green_hover: #088178;
 $text: #222222;
 $p_text: #465b52;
-$border: #cce7d0;
-$pink: #fddde4;
+$green_hover: #088178;
 $bright_green: #cdebbc;
+$border: #cce7d0;
+$cart: #e8f6ea;
+$cat_manufact: #606063;
+$dark_blue: #041e42;
+$bright: #E3E6F3;
+$blue_gray: #818ea0;
 $bright_blue: #cdd4f8;
+$bright_aqua: #d1e8f2;
 $bright_violet: #f6dbf6;
 $bright_peach: #fff2e5;
-$bright_aqua: #d1e8f2;
-$cat_manufact: #606063;
 $yellow: #ffc804;
-$cart: #e8f6ea;
 $red: #ef3636;
+$pale_red: #ec544e;
+$pink: #fddde4;
 //GLOBALS
 
 * {
@@ -329,6 +332,7 @@ p {
   right: 15px;
 }
 
+//BANNER
 .banner {
   margin-top: 60px;
   display: flex;
@@ -362,4 +366,180 @@ p {
   background-color: $green_hover;
   color: $white;
 
+}
+
+//PROMO
+.promo-banners {
+  margin-top: 60px;
+  padding: 0 25px;
+  width: 100%;
+}
+
+.promo-banner__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+  padding: 0 32px;
+
+}
+
+.promo-banner__item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-image: url("../images/banner/b17.jpg");
+  background-size: cover;
+  background-position: top center;
+  padding: 30px;
+  height: 40vh;
+  flex: 0 0 49%;
+  min-width: 580px;
+}
+
+.promo-banner__item-header {
+  color: $white;
+  font-size: 20px;
+  font-weight: 300;
+  padding-bottom: 5px;
+}
+
+.promo-banner__item-caption {
+  color: $white;
+  font-size: 28px;
+  font-weight: 800;
+  padding-bottom: 15px;
+}
+
+.promo-banner__item-caption span {
+  font-size: 14px;
+  font-weight: 500;
+
+}
+
+.promo-banner_button {
+  font-size: 13px;
+  padding: 11px 18px;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+
+
+}
+
+.promo-banner__item:hover .promo-banner_button {
+  background-color: $green_hover;
+  border: 1px solid $green_hover;
+}
+
+.promo-banner__item--collections {
+  background-image: url("../images/banner/b10.jpg");
+}
+
+.promo-banner-small__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.promo-banner-small__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-image: url("../images/banner/b7.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  margin: 0 30px;
+  height: 30vh;
+  min-width: 30%;
+}
+
+.promo-banner-small__item-header {
+  color: $white;
+  font-weight: 900;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.promo-banner-small__item-caption {
+  color: $pale_red;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.promo-banner-small__item--winter {
+  background-image: url("../images/banner/b4.jpg");
+}
+
+.promo-banner-small__item--t_shirts {
+  background-image: url("../images/banner/b18.jpg");
+}
+
+//NEWSLETTER
+.newsletter {
+  margin-top: 60px;
+  padding: 80px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../images/banner/b14.png");
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: $dark_blue;
+}
+
+.newsletter__header h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: $white;
+  margin-bottom: 15px;
+}
+
+.newsletter__header p {
+  font-size: 16px;
+  font-weight: 600;
+  color: $blue_gray;
+}
+
+.newsletter__header span {
+  color: $yellow;
+}
+
+.newsletter__form {
+  display: flex;
+  width: 40%;
+}
+
+.newsletter__input {
+  height: 3.125rem;
+  padding: 0 1.25em;
+  font-size: 18px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  background-color: $white;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+}
+
+.newsletter__submit {
+  background-color: $green_hover !important;
+  color: $white;
+  white-space: nowrap;
+}
+
+.newsletter__submit[value]{
+  font-size: 18px;
 }
