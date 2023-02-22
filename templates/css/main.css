@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "media.css";
 * {
   font-family: "League Spartan", sans-serif;
 }
@@ -101,6 +102,14 @@ header {
   position: absolute;
   top: 18px;
   left: 0;
+}
+
+#mobile {
+  display: none;
+}
+
+#close {
+  display: none;
 }
 
 .hero-header {
@@ -480,11 +489,9 @@ header {
   font-size: 18px;
   width: 100%;
   border: 1px solid transparent;
-  border-radius: 4px;
   outline: none;
   background-color: #ffffff;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 4px 0 0 4px;
 }
 
 .newsletter__submit {
@@ -518,7 +525,7 @@ header {
 .column h4 {
   font-size: 20px;
   margin-bottom: 8px;
-  font-width: 600;
+  font-weight: 600;
 }
 
 .column li {
@@ -596,6 +603,40 @@ footer .logo {
 .copyright {
   margin-bottom: 30px;
   margin-left: 25px;
+}
+
+@media (max-width: 799px) {
+  .main-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    position: fixed;
+    row-gap: 20px;
+    height: 100vh;
+    width: 300px;
+    top: 0;
+    right: -300px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s ease;
+  }
+  #mobile {
+    display: flex;
+  }
+  #mobile i {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  .main-menu-list.active {
+    right: 0;
+  }
+  #close {
+    display: block;
+    color: #222222;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
