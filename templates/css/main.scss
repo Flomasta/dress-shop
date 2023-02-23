@@ -13,6 +13,7 @@ $cart: #e8f6ea;
 $cat_manufact: #606063;
 $dark_blue: #041e42;
 $bright: #E3E6F3;
+$middle_gray: #c9cbce;
 $blue_gray: #818ea0;
 $bright_blue: #cdd4f8;
 $bright_aqua: #d1e8f2;
@@ -804,22 +805,22 @@ footer .logo {
 }
 
 //SHOP_PAGE
-
-
-.shop-header {
-  background-image: url("../images/banner/b1.jpg");
+.section__header {
   width: 100%;
   height: 40vh;
   background-size: cover;
   align-items: center;
-
 }
 
-.shop-header .h1, .shop-header .h4 {
+.section__header--shop {
+  background-image: url("../images/banner/b1.jpg");
+}
+
+.section__header .h1, .section__header .h4 {
   color: $white;
 }
 
-.shop-header .h4 {
+.section__header .h4 {
   font-size: 20px;
   font-weight: 500;
 }
@@ -847,7 +848,7 @@ footer .logo {
 
 @media (max-width: 799px) {
   //SHOP_PAGE
-  .shop-header .h4 {
+  .section__header .h4 {
     font-size: 14px;
     padding-top: 0;
   }
@@ -949,7 +950,109 @@ footer .logo {
     width: 100%;
   }
   .product__details p {
+    width: 100%;
+    line-height: 20px;
+  }
+}
+
+//BLOG
+
+
+.section__header--blog {
+  background-image: url("../images/banner/b19.jpg");
+}
+
+.blog {
+  padding: 150px 150px 0 150px;
+}
+
+.blog__list {
+  display: flex;
+  gap: 150px;
+  flex-direction: column;
+}
+
+.blog__item {
+  display: flex;
+  align-items: center;
   width: 100%;
+  position: relative;
+}
+
+.blog__image, {
+  width: 50%;
+  margin-right: 40px;
+}
+
+.blog__image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.blog__date {
+  display: inline-block;
+  position: absolute;
+  font-size: 130px;
+  font-weight: 700;
+  top: -68px;
+  left: 0;
+  color: $middle_gray;
+  z-index: -9;
+}
+
+.blog__details {
+  width: 50%;
+}
+
+.blog__details a {
+  font-size: 20px;
+  color: $black;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.blog__details p {
+  font-size: 20px;
   line-height: 20px;
 }
+
+.blog__details a::after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background-color: $black;
+  position: absolute;
+  right: -60px;
+  top: 7px;
+
+}
+
+.blog__details a:hover {
+  color: $green_hover;
+}
+
+.blog__details a:hover::after {
+  background-color: $green_hover;
+}
+
+@media (max-width: 799px) {
+  .blog {
+  padding: 100px 20px 0 20px;
+}
+  .blog__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .blog__image, {
+    width: 100%;
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+  .blog__details {
+    width: 100%;
+  }
 }
