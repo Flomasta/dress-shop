@@ -1030,5 +1030,140 @@ footer .logo {
     width: 100%;
   }
 }
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 60px;
+}
+
+.contact-details__contacts {
+  width: 40%;
+}
+
+.contact-details__contacts span, .contact_form span {
+  font-size: 22px;
+}
+
+.contact-details__contacts h2, .contact_feedback h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+
+.contact-details__contacts h3, .contact_feedback h3 {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+.contact-details__item {
+  display: flex;
+  padding: 10px 0;
+}
+
+.contact-details__item i {
+  font-size: 14px;
+  padding-right: 22px;
+}
+
+.contact-details__item p {
+  font-size: 14px;
+}
+
+.contact_feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding: 50px;
+  border: 1px solid #e1e1e1;
+}
+
+.contact_feedback__form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 65%;
+}
+
+.contact_feedback form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 65%;
+}
+
+.contact_feedback__input {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+}
+
+.contact_feedback__button {
+  background-color: #088178 !important;
+  color: #ffffff;
+  width: 20%;
+}
+
+.contact_feedback__people {
+  padding-bottom: 25px;
+}
+
+.contact_feedback__people ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact_feedback__people li {
+  display: flex;
+}
+
+.contact_feedback__people img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+  padding-bottom: 15px;
+}
+
+.contact_feedback__people p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+.contact_feedback__people span {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+
+@media (max-width: 799px) {
+  .contact-details {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 30px;
+  }
+  .contact-details__contacts {
+    width: 100%;
+  }
+  .contact_feedback__form-wrapper {
+    width: 100%;
+  }
+  .contact_feedback {
+    flex-direction: column;
+  }
+  .contact_feedback__button {
+    width: 40%;
+  }
+  .contact_feedback__people {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
