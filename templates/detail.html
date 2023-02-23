@@ -1,13 +1,249 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Winstor Shop </title>
+    <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
 </head>
 <body>
+<header class="header ">
+    <section class="top-line">
+        <a href="!#"><img src="images/logo.png" class="logo" alt="Winstor Shop Logo"></a>
+        <nav class="main-menu">
+            <ul class="main-menu-list" id="navbar">
+                <div class="close_button" id="close"><i class="fa-solid fa-xmark"></i></div>
+                <li class="main-menu-item"><a class="active" href="index.html">Home</a></li>
+                <li class="main-menu-item"><a href="shop.html">Shop</a></li>
+                <li class="main-menu-item"><a href="blog.html">Blog</a></li>
+                <li class="main-menu-item"><a href="about.html">About</a></li>
+                <li class="main-menu-item"><a href="contact.html">Contact</a></li>
+                <li class="main-menu-item"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
 
+            </div>
+        </nav>
+    </section>
+
+    <section class="hero-header shop-header">
+        <h1>
+            <span class="h1">#stayhome</span></h1>
+        <p class="h4">Save more with coupons & up to 70% off!</p>
+    </section>
+</header>
+<main>
+    <section class="product">
+        <div class="product__image_block">
+            <img src="./images/products/f1.jpg" width="100%" id="MainImg" alt="">
+            <ul class="product__image-list">
+                <li class="product__image-item"><img src="./images/products/f1.jpg" width="100%" class="small-img"
+                                                     alt="">
+                </li>
+                <li class="product__image-item"><img src="./images/products/f2.jpg" width="100%" class="small-img"
+                                                     alt="">
+                </li>
+                <li class="product__image-item"><img src="./images/products/f3.jpg" width="100%" class="small-img"
+                                                     alt="">
+                </li>
+                <li class="product__image-item"><img src="./images/products/f4.jpg" width="100%" class="small-img"
+                                                     alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="product__description-block">
+            <div class="h3 product__breadcrumbs">Home/T-shirt</div>
+            <h1 class="h2 product__header">Men's Fashion t Shirt</h1>
+            <div class="h2 product__price">150$</div>
+            <div class="product__size">
+                <select name="" id="">
+                    <option value="">Select size</option>
+                    <option value="">XL</option>
+                    <option value="">XXL</option>
+                    <option value="">Small</option>
+                    <option value="">Large</option>
+                </select>
+            </div>
+            <div class="product__amount">
+                <input type="number" name="" id="" value="1">
+                <button class="button">Add to cart</button>
+            </div>
+            <div class="product__details">
+                <h3 class=" h3 product__details-header">Product details</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, distinctio harum ipsam itaque
+                    minima neque quaerat velit. Cum deserunt, doloribus error, itaque odit repellat rerum, soluta vero
+                    voluptas voluptate voluptates.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto autem dolorum eius eos, et
+                    facilis, illum iure necessitatibus nihil numquam odio recusandae rerum sequi similique tempora,
+                    temporibus vitae voluptas.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos eaque eum fuga ipsum minus,
+                    nobis numquam pariatur perspiciatis, provident quisquam quos, rem reprehenderit voluptatum.
+                    Doloremque laudantium modi quasi ullam veniam?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa deleniti mollitia quasi tempore
+                    tenetur. Asperiores illum ipsa laboriosam maiores maxime, nam odit officia quaerat quam quis
+                    repellat sint ut voluptate?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias blanditiis deleniti
+                    deserunt dolorum esse harum hic modi molestias nam nemo quisquam ratione rerum, sunt tenetur
+                    voluptas voluptate. Debitis, quos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
+                    autem impedit maiores molestiae nesciunt. Dolore eum exercitationem iste maxime nostrum optio
+                    perspiciatis quae tempore totam velit! Blanditiis distinctio dolorem earum.</p>
+            </div>
+
+
+        </div>
+    </section>
+    <section class="catalog catalog__featured">
+        <h2 class="catalog__title h2">Featured Products</h2>
+        <p class="catalog__caption">Summer Collection New Moder Design</p>
+        <ul class="catalog__list">
+            <li class="catalog__item">
+                <img class="catalog__image" src="./images/products/f2.jpg" alt="Adidas">
+                <div class="catalog__item-description">
+                    <span class="catalog__manufacturer">adidas</span><br>
+                    <h4 class="catalog__item-title h4">Cartoon Astronaut T-Shirts</h4>
+                    <ul class="catalog__stars">
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                    </ul>
+                    <span class="catalog__price">78$</span>
+                </div>
+                <a class="catalog__cart-button" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+
+            <li class="catalog__item">
+                <img class="catalog__image" src="./images/products/f3.jpg" alt="Adidas">
+                <div class="catalog__item-description">
+                    <span class="catalog__manufacturer">adidas</span><br>
+                    <h4 class="catalog__item-title h4">Cartoon Astronaut T-Shirts</h4>
+                    <ul class="catalog__stars">
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                    </ul>
+                    <span class="catalog__price">78$</span>
+                </div>
+                <a class="catalog__cart-button" href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li class="catalog__item">
+                <img class="catalog__image" src="./images/products/f4.jpg" alt="Adidas">
+                <div class="catalog__item-description">
+                    <span class="catalog__manufacturer">adidas</span><br>
+                    <h4 class="catalog__item-title h4">Cartoon Astronaut T-Shirts</h4>
+                    <ul class="catalog__stars">
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                    </ul>
+                    <span class="catalog__price">78$</span>
+                </div>
+                <a class="catalog__cart-button" href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+
+            <li class="catalog__item">
+                <img class="catalog__image" src="./images/products/f5.jpg" alt="Adidas">
+                <div class="catalog__item-description">
+                    <span class="catalog__manufacturer">adidas</span><br>
+                    <h4 class="catalog__item-title h4">Cartoon Astronaut T-Shirts</h4>
+                    <ul class="catalog__stars">
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                        <li class="catalog__star"><i class="fas fa-star"></i></li>
+                    </ul>
+                    <span class="catalog__price">78$</span>
+                </div>
+                <a class="catalog__cart-button" href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+
+        </ul>
+
+    </section>
+    <section class="newsletter">
+        <div class="newsletter__header">
+            <h4>Sign Up For Newletters</h4>
+            <p>Get E-mail updates about our lastest shop and <span>special offers.</span></p>
+        </div>
+        <form action="" class="newsletter__form">
+            <input type="text" class="newsletter__input" placeholder="Your email address">
+            <input type="submit" class="newsletter__submit button" value="Sign up!">
+        </form>
+    </section>
+
+</main>
+<footer class="footer">
+    <section class="footer_info">
+        <div class="footer_contacts column">
+            <img class="logo" src="./images/logo.png" alt="Cara Dress Market">
+            <h4 class="footer_contacts__header">Contact</h4>
+            <ul class="footer_contacts__list">
+                <li class="footer_contacts__item"><span>Address:</span> 562 Wellington Road.Stree 32, San Francisco</li>
+                <li class="footer_contacts__item"><span>Phone</span>: +01 2222 365/(+91)01 2345 9789</li>
+                <li class="footer_contacts__item"><span>Hours:</span> 10:00 - 18:00. Mon - Sat</li>
+            </ul>
+            <section class="follow_us">
+                <h4 class="follow_us__header">Follow Us</h4>
+                <ul class="follow_us__list">
+                    <li class="follow_us__item"><i class="fab fa-facebook-f"></i></li>
+                    <li class="follow_us__item"><i class="fab fa-twitter"></i></li>
+                    <li class="follow_us__item"><i class="fab fa-instagram"></i></li>
+                    <li class="follow_us__item"><i class="fab fa-pinterest"></i></li>
+                    <li class="follow_us__item"><i class="fab fa-youtube"></i></li>
+                </ul>
+            </section>
+        </div>
+        <div class="footer_about column">
+            <h4>About</h4>
+            <ul class="footer_contacts__list">
+                <li><a href="">About us</a></li>
+                <li><a href="">Delivery information</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms and conditions</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+
+        </div>
+        <div class="my_account column">
+            <h4>My account</h4>
+            <ul class="footer_contacts__list">
+                <li><a href="">Sign in</a></li>
+                <li><a href="">Viev Cart</a></li>
+                <li><a href="">My wishlist</a></li>
+                <li><a href="">Track My Order</a></li>
+                <li><a href="">Help</a></li>
+            </ul>
+        </div>
+        <div class="apps column">
+            <h4>Install app</h4>
+            <div class="footer_contacts__list">
+                <p>From App Store or GooglePlay</p>
+                <div class="apps__images">
+                    <img class="apps__image" src="./images/pay/app.jpg" alt="AppStore">
+                    <img class="apps__image" src="./images/pay/play.jpg" alt="GooglePlay">
+                </div>
+                <p>Secure Payment Gataway</p>
+                <img src="./images/pay/pay.png" alt="Mastercard/Visa">
+            </div>
+        </div>
+    </section>
+    <div class="copyright">Created by Flomasta</div>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>
