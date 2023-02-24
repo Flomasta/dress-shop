@@ -1,0 +1,80 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="hero-header section__header section__header--about">
+        <h1>
+            <span class="h1">#let's talk</span></h1>
+        <p class="h4">LEAVE A MESSAGE. We love to hear from you!</p>
+    </section>
+    </header>
+
+    <main>
+        <section class="contact-details">
+            <div class="contact-details__contacts">
+                <span>GET IN TOUCH</span>
+                <h2>Visit one of our agency locations or contact us today</h2>
+                <h3>Head office</h3>
+                <ul class="contact-details__list">
+                    <li class="contact-details__item"><i class="fa-regular fa-map"></i>
+                        <p>56 Glassford Street Glasgof G1 1UL New York</p></li>
+                    <li class="contact-details__item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>56 Glassford Street Glasgof G1 1UL New York</p></li>
+                    <li class="contact-details__item"><i class="fa-solid fa-phone"></i>
+                        <p>56 Glassford Street Glasgof G1 1UL New York</p>
+                    </li>
+                    <li class="contact-details__item"><i class="fa-regular fa-clock"></i>
+                        <p>56 Glassford Street Glasgof G1 1UL New York</p></li>
+                </ul>
+            </div>
+            <div class="contact-details__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79041.62428516548!2d-1.3177985158989611!3d51.75039538520039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a9ef8c485b%3A0xd2ff1883a001afed!2z0J7QutGB0YTQvtGA0LQg0YPQvdC40LLQtdGA0YHQuNGC0LXRgg!5e0!3m2!1sru!2sde!4v1677178897228!5m2!1sru!2sde"
+                        width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section class="contact_feedback">
+            <div class="contact_feedback__form-wrapper">
+                <span>LEAVE A MESSAGE</span>
+                <h2>We love to hear from you</h2>
+                <form action="">
+                    <input class="contact_feedback__input" type="text" placeholder="Your name">
+                    <input class="contact_feedback__input" type="text" placeholder="Email">
+                    <input class="contact_feedback__input" type="text" placeholder="Subject">
+                    <textarea class="contact_feedback__input" name="" id="" placeholder="Your text"></textarea>
+                    <input class="button contact_feedback__button" type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="contact_feedback__people">
+                <ul>
+                    <li><img src="images/people/1.png" alt="">
+                        <p><span>Joe Doe</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br> Email:
+                            contact@example.com</p>
+                    </li>
+                    <li><img src="images/people/2.png" alt="">
+                        <p><span>Joe Doe</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br> Email:
+                            contact@example.com</p>
+                    </li>
+                    <li><img src="images/people/3.png" alt="">
+                        <p><span>Joe Doe</span> Senior Marketing Manager <br> Phone: + 000 123 000 77 88 <br> Email:
+                            contact@example.com</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="newsletter">
+            <div class="newsletter__header">
+                <h4>Sign Up For Newletters</h4>
+                <p>Get E-mail updates about our lastest shop and <span>special offers.</span></p>
+            </div>
+            <form action="" class="newsletter__form">
+                <input type="text" class="newsletter__input" placeholder="Your email address">
+                <input type="submit" class="newsletter__submit button" value="Sign up!">
+            </form>
+        </section>
+
+    </main>
+{% endblock %}

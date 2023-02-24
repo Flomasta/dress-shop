@@ -1,0 +1,87 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <section class="hero-header section__header section__header--blog">
+        <h1>
+            <span class="h1">#checkout</span></h1>
+        <p class="h4">Real all case studies about our products</p>
+    </section>
+    </header>
+
+    <main>
+        <section class="personal">
+            <div class="personal__form-wrapper">
+                <form action="" id="personal__form">
+                    <div id="personal__user-info">
+                        <div class="personal__form-field">
+                            <input required class="personal__form-control" name="name"
+                                   placeholder="Name" type="text">
+                        </div>
+                        <div class="personal__form-field">
+                            <input required class="personal__form-control" name="email"
+                                   placeholder="Email" type="text">
+                        </div>
+                    </div>
+                    <hr>
+                    <h3>Shipping Information:</h3>
+                    <hr>
+                    <div class="personal__shipping-info">
+                        <div class="personal__form-field">
+                            <input class="personal__form-control" name="address"
+                                   placeholder="Address" type="text">
+                        </div>
+                        <div class="personal__form-field">
+                            <input class="personal__form-control" name="city"
+                                   placeholder="City" type="text">
+                        </div>
+                        <div class="personal__form-field">
+                            <input class="personal__form-control" name="state"
+                                   placeholder="State" type="text">
+                        </div>
+                        <div class="personal__form-field">
+                            <input class="personal__form-control" name="zipcode"
+                                   placeholder="Zipcode" type="text">
+                        </div>
+                        <div class="personal__form-field">
+                            <input class="personal__form-control" name="country"
+                                   placeholder="Country" type="text">
+                        </div>
+                    </div>
+                    <input id="personal__button" class="button personal__button--success personal__button--block"
+                           type="submit" value="Continue">
+                </form>
+                <br>
+                <div class="personal__box-element hidden" id="payment-info">
+                    <small>Paypal Options</small>
+                </div>
+            </div>
+            <div class="summary">
+                <a class="button button--summary" href="{% url 'cart' %}">&#x2190; Back to cart</a>
+                <hr>
+                <h3>Order summary</h3>
+                <hr>
+                <div class="summary__cart-row">
+                    <div><img src="{% static 'images/products/f1.jpg' %}" alt=""></div>
+                    <div><p>Product 1</p></div>
+                    <div>$20.00</div>
+                    <div>x2</div>
+                </div>
+                <hr>
+                <div class="summary__total-info">
+                    <h5>Items: 2</h5><br>
+                    <h5>Total: $4</h5>
+                </div>
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="newsletter__header">
+                <h4>Sign Up For Newletters</h4>
+                <p>Get E-mail updates about our lastest shop and <span>special offers.</span></p>
+            </div>
+            <form action="" class="newsletter__form">
+                <input type="text" class="newsletter__input" placeholder="Your email address">
+                <input type="submit" class="newsletter__submit button" value="Sign up!">
+            </form>
+        </section>
+    </main>
+{% endblock %}
