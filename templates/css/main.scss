@@ -1259,3 +1259,135 @@ footer .logo {
     margin-top: 40px;
   }
 }
+
+//CART
+.cart {
+  overflow-x: auto;
+}
+
+.cart table {
+  margin-top: 60px;
+  padding: 60px 60px;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+  text-align: center;
+
+}
+
+.cart thead {
+  border-top: 1px solid $middle_gray;
+  border-bottom: 1px solid $middle_gray;
+}
+
+.cart thead td {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 18px 0;
+}
+
+.cart tbody td {
+  padding-top: 15px;
+  font-size: 17px;
+}
+
+.cart table img {
+  width: 70px;
+}
+
+.cart table td:nth-child(1) {
+  width: 100px;
+}
+
+.cart table td:nth-child(2) {
+  width: 150px;
+}
+
+.cart table td:nth-child(3) {
+  width: 250px;
+}
+
+.cart table td:nth-child(4), .cart table td:nth-child(5), .cart table td:nth-child(6) {
+  width: 150px;
+}
+
+.cart table td:nth-child(5) input {
+  width: 70px;
+  padding: 10px 5px 10px 15px;
+}
+
+.cart-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 60px;
+  padding: 60px 60px;
+}
+
+.coupon {
+  width: 50%;
+  margin-bottom: 30px;
+
+}
+
+.coupon h3 {
+  padding-bottom: 15px;
+}
+
+.coupon form {
+  display: flex;
+}
+
+.coupon__value {
+  padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid $middle_gray;
+}
+
+.coupon__button, .subtotal__button {
+  background-color: $green_hover;
+  color: $white;
+}
+
+.subtotal {
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid $middle_gray;
+  padding: 30px;
+}
+
+.subtotal h3 {
+  padding: 15px 15px 15px 0;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.subtotal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+
+}
+
+.subtotal td {
+  width: 50%;
+  border: 1px solid $middle_gray;
+  padding: 15px;
+  font-size: 20px;
+}
+
+@media (max-width: 799px) {
+  .cart-add {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .coupon, .subtotal {
+    width: 100%;
+    padding: 20px;
+  }
+}
