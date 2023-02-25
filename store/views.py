@@ -41,3 +41,7 @@ def login_page(request):
 def checkout(request):
     context = {}
     return render(request, 'store/checkout.html', context)
+
+def detail(request):
+    context = {}
+    return render(request, 'store/detail.html', context)
