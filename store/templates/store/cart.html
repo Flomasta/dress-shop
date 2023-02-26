@@ -21,30 +21,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td><a href=""><i class="fa-regular fa-circle-xmark"></i></a></td>
-                    <td><img src="images/products/f1.jpg" alt=""></td>
-                    <td>Cartoon Austranaut t-shirt</td>
-                    <td>$118.50</td>
-                    <td><input type="number" name="" id="" value="1"></td>
-                    <td>$118.50</td>
-                </tr>
-                <tr>
-                    <td><a href=""><i class="fa-regular fa-circle-xmark"></i></a></td>
-                    <td><img src="images/products/f2.jpg" alt=""></td>
-                    <td>Cartoon Austranaut t-shirt</td>
-                    <td>$118.50</td>
-                    <td><input type="number" name="" id="" value="1"></td>
-                    <td>$118.50</td>
-                </tr>
-                <tr>
-                    <td><a href=""><i class="fa-regular fa-circle-xmark"></i></a></td>
-                    <td><img src="images/products/f3.jpg" alt=""></td>
-                    <td>Cartoon Austranaut t-shirt</td>
-                    <td>$118.50</td>
-                    <td><input type="number" name="" id="" value="1"></td>
-                    <td>$118.50</td>
-                </tr>
+                {% for item in items %}
+                    <tr>
+                        <td><a href=""><i class="fa-regular fa-circle-xmark"></i></a></td>
+                        <td><img src="{{ item.product.imageURL }}" alt=""></td>
+                        <td>{{ item.product.name }}</td>
+                        <td>${{ item.product.price|floatformat:2 }}</td>
+                        <td><input type="number" name="" id="" value="{{ item.quantity }}"></td>
+                        <td>
+                            ${{ item.get_total }}</td>
+                    </tr>
+                {% endfor %}
 
                 </tbody>
             </table>
@@ -61,8 +48,12 @@
                 <h3>Cart Totals</h3>
                 <table>
                     <tr>
+                        <td>Items</td>
+                        <td>{{ order.get_cart_items }}</td>
+                    </tr>
+                    <tr>
                         <td>Card Subtotal</td>
-                        <td>$335</td>
+                        <td>${{ order.get_cart_total }}</td>
                     </tr>
                     <tr>
                         <td>Shipping</td>
@@ -70,7 +61,7 @@
                     </tr>
                     <tr>
                         <td><strong>Total</strong></td>
-                        <td><strong>$335</strong></td>
+                        <td><strong>${{ order.get_cart_total }}</strong></td>
                     </tr>
                 </table>
                 <a class="button subtotal__button" href="{% url 'checkout' %}">Proceed to checkout</a>

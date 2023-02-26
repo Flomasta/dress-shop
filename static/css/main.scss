@@ -131,6 +131,10 @@ header {
   color: $green_hover;
 }
 
+.main-menu-item--cart a:hover span {
+  background-color: $green_hover
+}
+
 .main-menu-item a.active::after, .main-menu-item a:hover::after {
   content: '';
   width: 45%;
@@ -140,6 +144,23 @@ header {
   top: 18px;
   left: 0;
 }
+
+.main-menu-item--cart {
+  margin-right: 5px;
+}
+
+.main-menu-item--cart span {
+
+  font-size: 10px;
+  padding: 5px;
+  border-radius: 25px;
+  position: absolute;
+  top: -20px;
+  background-color: $black;
+  color: $middle_gray;
+
+}
+
 
 #mobile {
   display: none;
