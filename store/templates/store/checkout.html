@@ -93,7 +93,7 @@
 
         let shipping = '{{ order.shipping }}'
         let total = '{{order.get_cart_total|floatformat:2  }}'
-
+        console.log(shipping)
         if (shipping == 'False') {
             document.getElementsByClassName('personal__shipping-info').innerHTML = ''
         }
