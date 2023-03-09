@@ -11,7 +11,7 @@
     <main>
         <section class="personal">
             <div class="personal__form-wrapper">
-                <form action="" id="personal__form" class="personal__form">
+                <form action="" id="shipping-info" class="personal__form">
                     <div id="personal__user-info" class="personal__user-info">
                         <div class="personal__form-field">
                             <input required class="personal__form-control" name="name"
@@ -52,7 +52,8 @@
                 </form>
                 <br>
                 <div class="personal__box-element hidden" id="payment-info">
-                    <small>Paypal Options</small>
+                    <small>Payment Options</small><br><br>
+                    <button class="button persona__payment-button" id="make-payment">Make a payment</button>
                 </div>
             </div>
             <div class="summary">
@@ -87,4 +88,80 @@
             </form>
         </section>
     </main>
+
+    <script type="text/javascript">
+
+        let shipping = '{{ order.shipping }}'
+        let total = '{{order.get_cart_total|floatformat:2  }}'
+
+        if (shipping == 'False') {
+            document.getElementsByClassName('personal__shipping-info').innerHTML = ''
+        }
+
+        if (user != 'AnonymousUser') {
+            document.getElementById('personal__user-info').innerHTML = ''
+        }
+        if (shipping == 'False' && user != 'AnonymousUser') {
+            document.getElementById('shipping-info').classList.add('hidden')
+            document.getElementById('payment-info').classList.remove('hidden')
+        }
+
+
+        let form = document.getElementById('shipping-info')
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault()
+            console.log('Form submitted')
+            document.getElementById('personal__button').classList.add('hidden')
+            document.getElementById('payment-info').classList.remove('hidden')
+        })
+
+        document.getElementById('make-payment').addEventListener('click', function (e) {
+            submitFormData()
+        })
+
+        function submitFormData() {
+            console.log('Payment button clicked')
+            let userFormData = {
+                'name': null,
+                'email': null,
+                'total': total
+            }
+            let shippingInfo = {
+                'address': null,
+                'citi': null,
+                'state': null,
+                'zipcode': null,
+                'country': null,
+            }
+            if (shipping != 'False') {
+                shippingInfo.address = form.address.value
+                shippingInfo.citi = form.city.value
+                shippingInfo.state = form.state.value
+                shippingInfo.zipcode = form.zipcode.value
+            }
+            if (user == 'AnonymousUser') {
+                userFormData.name = form.name.value
+                userFormData.email = form.email.value
+            }
+            console.log(userFormData)
+            let url = '/process_order/'
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrftoken,
+                },
+                body: JSON.stringify({'form': userFormData, 'shipping': shippingInfo}),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log('Success:', data);
+                    alert('Transaction completed');
+                    window.location.href = "{% url 'store' %}"
+                })
+        }
+
+
+    </script>
 {% endblock %}

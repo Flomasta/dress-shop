@@ -17,6 +17,26 @@ if (close) {
         nav.classList.remove('active');
     })
 }
+
+//Menu active
+const menuItems = document.querySelectorAll('.main-menu-item a')
+removeActiveClasses()
+for (let menuItem of menuItems) {
+    if (menuItem.href === location.href) {
+        console.log(menuItem.href)
+        console.log(location.href)
+        menuItem.classList.add('active')
+        console.log(menuItem)
+    }
+
+}
+
+function removeActiveClasses() {
+    menuItems.forEach((menuItem) => {
+        menuItem.classList.remove('active')
+    })
+}
+
 // SIMPLE GALLERY
 // small_img[0].onclick = function () {
 //     MainImg.src = small_img[0].src;
@@ -35,20 +55,21 @@ if (close) {
 //
 // }
 
-//CART BUTTON
+//CART ADD BUTTON
 
 let updateBtns = document.getElementsByClassName('update-cart');
-for (i = 0; i < updateBtns.length; i++) {
-    updateBtns[i].addEventListener('click', function () {
+for (let item of updateBtns) {
+    item.addEventListener('click', function () {
         let productId = this.dataset.product
         let action = this.dataset.action
-        console.log('productId:', productId, 'Action:', action)
-        console.log('USER', user)
+        console.log(productId)
+        console.log(action)
         if (user === 'AnonymousUser') {
             console.log('User is not authenticated')
         } else {
             updateUserOrder(productId, action)
         }
+
     })
 }
 
