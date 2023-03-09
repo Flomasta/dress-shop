@@ -23,10 +23,7 @@ const menuItems = document.querySelectorAll('.main-menu-item a')
 removeActiveClasses()
 for (let menuItem of menuItems) {
     if (menuItem.href === location.href) {
-        console.log(menuItem.href)
-        console.log(location.href)
         menuItem.classList.add('active')
-        console.log(menuItem)
     }
 
 }
@@ -62,15 +59,35 @@ for (let item of updateBtns) {
     item.addEventListener('click', function () {
         let productId = this.dataset.product
         let action = this.dataset.action
-        console.log(productId)
-        console.log(action)
         if (user === 'AnonymousUser') {
-            console.log('User is not authenticated')
+            addCookieItem(productId, action)
         } else {
             updateUserOrder(productId, action)
         }
 
     })
+}
+
+function addCookieItem(productId, action) {
+    if (action == 'add') {
+        if (cart[productId] == undefined) {
+            cart[productId] = {'quantity': 1}
+        } else {
+            cart[productId]['quantity']++
+        }
+    }
+    if (action == 'remove') {
+        cart[productId]['quantity']--
+        if (cart[productId]['quantity'] <= 0) {
+            delete cart[productId]
+        }
+    }
+    if (action == 'delete_item') {
+        delete cart[productId]
+    }
+    // console.log(`'cart=' + ${JSON.stringify(cart)} + ";domain=;path=/"`)
+    document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
+    location.reload()
 }
 
 function updateUserOrder(productId, action) {
@@ -91,6 +108,4 @@ function updateUserOrder(productId, action) {
             console.log('data:', data)
             location.reload()
         })
-
-
 }

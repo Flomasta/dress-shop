@@ -33,6 +33,27 @@
 
         const csrftoken = getToken('csrftoken');
 
+        function getCookie(name) {
+            let cookieArr = document.cookie.split(';')
+
+            for (let i = 0; i < cookieArr.length; i++) {
+                let cookiePair = cookieArr[i].split('=')
+                if (name == cookiePair[0].trim()) {
+                    return decodeURIComponent(cookiePair[1])
+                }
+            }
+            return null
+        }
+
+        let cart = JSON.parse(getCookie('cart'))
+        if (cart == undefined) {
+            cart = {}
+            console.log('cart was created')
+            console.log(`'cart=' + ${JSON.stringify(cart)} + ";domain=;path=/"`)
+            document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
+        }
+        console.log('Cart', cart)
+
     </script>
 
 
@@ -50,12 +71,11 @@
                 <li class="main-menu-item"><a href="{% url 'blog' %}">Blog</a></li>
                 <li class="main-menu-item"><a href="{% url 'about' %}">About</a></li>
                 <li class="main-menu-item"><a href="{% url 'contact' %}">Contact</a></li>
-                <li class="main-menu-item main-menu-item--cart" data-foo=" hello "><a
+                <li class="main-menu-item main-menu-item--cart"><a
                         href="{% url 'cart' %}"><i
-                        class="fa-solid fa-bag-shopping"></i> <span>{{ cardItems }}</span></a></li>
+                        class="fa-solid fa-bag-shopping"></i> <span>{{ cartItems }}</span></a></li>
                 <li class=" main-menu-item"><a href="{% url 'login-page' %}"><i
                         class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
-                <h1 style="color: black; font-size: 100px;">{{ cartItems }}</h1>
             </ul>
             <div id="mobile">
                 <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
