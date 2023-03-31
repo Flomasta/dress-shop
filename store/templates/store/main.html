@@ -115,19 +115,19 @@
             <div class="footer_about column">
                 <h4>About</h4>
                 <ul class="footer_contacts__list">
-                    <li><a href="">About us</a></li>
+                    <li><a href="{% url 'about' %}">About us</a></li>
                     <li><a href="">Delivery information</a></li>
                     <li><a href="">Privacy Policy</a></li>
                     <li><a href="">Terms and conditions</a></li>
-                    <li><a href="">Contact Us</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
                 </ul>
 
             </div>
             <div class="my_account column">
                 <h4>My account</h4>
                 <ul class="footer_contacts__list">
-                    <li><a href="">Sign in</a></li>
-                    <li><a href="">Viev Cart</a></li>
+                    <li><a href="{% url 'login-page' %}">Sign in</a></li>
+                    <li><a href="{% url 'cart' %}">Viev Cart</a></li>
                     <li><a href="">My wishlist</a></li>
                     <li><a href="">Track My Order</a></li>
                     <li><a href="">Help</a></li>

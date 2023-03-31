@@ -1507,9 +1507,19 @@ footer .logo {
   text-align: center;
 }
 
-.persona__payment-button {
+.personal__payment-button, .stripe-button-el span {
   background-color: $green_hover;
   color: $white;
+}
+
+.stripe-button-el {
+  padding: 0 !important;
+}
+
+.stripe-button-el span, .stripe-button-el {
+  background: $green_hover !important;
+  color: $white !important;
+  outline: none;
 }
 
 .personal__box-element {
@@ -1669,7 +1679,7 @@ footer .logo {
   .personal__form-wrapper, .summary {
     width: 100%;
   }
-  .summary{
+  .summary {
     margin-top: 30px;
   }
 }

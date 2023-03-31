@@ -1399,9 +1399,19 @@ footer .logo {
   text-align: center;
 }
 
-.persona__payment-button {
+.personal__payment-button, .stripe-button-el span {
   background-color: #088178;
   color: #ffffff;
+}
+
+.stripe-button-el {
+  padding: 0 !important;
+}
+
+.stripe-button-el span, .stripe-button-el {
+  background: #088178 !important;
+  color: #ffffff !important;
+  outline: none;
 }
 
 .personal__box-element {

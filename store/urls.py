@@ -13,5 +13,6 @@ urlpatterns = [
     path('detail/', views.detail, name='detail'),
     path('update_item/', views.update_item, name='update_item'),
     path('process_order/', views.processOrder, name='process_order'),
+    path('create-checkout-session/', views.create_checkout_session, name='create-checkout-session'),
 
 ]
